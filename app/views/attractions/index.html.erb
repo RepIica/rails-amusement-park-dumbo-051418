@@ -1,0 +1,11 @@
+<h1>Attractions</h1><br>
+<div style="width:30%; display: inline-block"><strong>Name</strong></div>
+<div style="width:30%; display: inline-block"><strong>Tickets</strong></div>
+<div style="width:30%; display: inline-block"><strong>Details</strong></div><br><br>
+<% @attractions.each do |attraction| %>
+    <div style="width:30%; display: inline-block"><%= attraction.name %> </div>
+    <div style="width:30%; display: inline-block"><%= attraction.tickets %></div>
+    <div style="width:30%; display: inline-block">
+      <%= link_to "Go on #{attraction.name}", attraction_path(attraction) %>
+    </div>
+<% end %>
